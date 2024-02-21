@@ -5,5 +5,26 @@
 @{
     ViewData["Title"] = "Movie List";   
 }
+<table>
+    <thead>
+        <td>Title </td>
+        <td>Director</td>
+        <td>Release Year</td>
+        <td>Rating</td>
+        <td>Edited</td>
+        <td>Release Year</td>
+        <td>Notes</td>
 
-<h2>Thank You For Adding The Movie</h2>
+        <tbody>
+            <td>@Model.Title</td>
+            <td>@Model.Director</td>
+            <td>@Model.ReleaseYear</td>
+            <td>@Model.Rating</td>
+            <td>@Model.Edited</td>
+            <td>@Model.ReleaseYear</td>
+            <td>@Model.Notes</td>
+
+        </tbody>
+
+    </thead>
+</table>

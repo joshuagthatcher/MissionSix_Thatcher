@@ -31,7 +31,9 @@ namespace MissionSixAssignment.Controllers
         [HttpGet]
         public IActionResult MovieList()
         {
-            return View("MovieList");
+            var Movie= _context.Movie
+                .OrderBy(x => x.Title).ToList();
+            return View(Movie);
         }  
         
         [HttpPost]
