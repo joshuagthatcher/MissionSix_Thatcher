@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MissionSixAssignment.Models;  
+
 
 namespace MissionSixAssignment.Models
 {
@@ -9,6 +11,8 @@ namespace MissionSixAssignment.Models
         {
         }
 
-        public DbSet<Movie> Movie { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DF1/kCyyj9UUHDliSLp28D8YoECVWeW44OzzQqXvr3I=",
+  "Hash": "imUbdfrMSefkw7nSbLF8xiQVQcBSPqC37gxIxU0un+0=",
   "Source": "MissionSix_Thatcher",
   "BasePath": "_content/MissionSix_Thatcher",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\a1234\\source\\repos\\MissionSixAssignment\\MissionSixAssignment\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MissionSix_Thatcher.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\a1234\\source\\repos\\MissionSixAssignment\\MissionSixAssignment\\wwwroot\\.gitignore",
+      "SourceId": "MissionSix_Thatcher",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a1234\\source\\repos\\MissionSixAssignment\\MissionSixAssignment\\wwwroot\\",
+      "BasePath": "_content/MissionSix_Thatcher",
+      "RelativePath": ".gitignore",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\.gitignore"
     },
     {
       "Identity": "C:\\Users\\a1234\\source\\repos\\MissionSixAssignment\\MissionSixAssignment\\wwwroot\\css\\site.css",

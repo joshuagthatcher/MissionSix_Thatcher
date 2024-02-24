@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MissionSix_Thatcher.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\a1234\\source\\repos\\MissionSixAssignment\\MissionSixAssignment\\wwwroot\\.gitignore",
+      "PackagePath": "staticwebassets\\.gitignore"
+    },
+    {
       "Id": "C:\\Users\\a1234\\source\\repos\\MissionSixAssignment\\MissionSixAssignment\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

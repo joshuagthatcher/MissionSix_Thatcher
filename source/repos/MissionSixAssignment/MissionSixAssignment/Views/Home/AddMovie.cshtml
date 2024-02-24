@@ -2,40 +2,56 @@
     ViewData["Title"] = "Add Movie";
 }
 @model MissionSixAssignment.Models.Movie
-<body>
-    <form method="post">
-        <h2>New Movie Form</h2>
 
-        <label asp-for="Title">Title:</label>
-        <input asp-for="Title" required>
 
-        <label asp-for="Director">Director:</label>
-        <input asp-for="Director" required>
+<h2>Movie Form</h2>
+<form method="post">
+    <input type="hidden" asp-for="MovieId" />
+    <label asp-for="CategoryId">Category</label>
+    <select asp-for="CategoryId">
+        @foreach (Category c in ViewBag.Categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+        }
+    </select>
 
-        <label asp-for="ReleaseYear">Release Year:</label>
-        <input asp-for="ReleaseYear" required>
+    <label asp-for="Title">Title:</label>
+    <input asp-for="Title" required>
 
-        <label asp-for="Rating">Rating:</label>
-        <select asp-for="Rating" required>
-            <option value="G">G</option>
-            <option value="PG">PG</option>
-            <option value="PG-13">PG-13</option>
-            <option value="R">R</option>
-        </select>
+    <label asp-for="Director">Director:</label>
+    <input asp-for="Director" required>
 
-        <label asp-for="Edited">Edited:</label>
-        <select asp-for="Edited" required>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
+    <label asp-for="Year">Release Year:</label>
+    <input asp-for="Year" required>
 
-        <label asp-for="LentTo">Lent To:</label>
-        <input asp-for="LentTo">
+    <label asp-for="Rating">Rating:</label>
+    <select asp-for="Rating" required>
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG-13">PG-13</option>
+        <option value="R">R</option>
+    </select>
 
-        <label asp-for="Notes">Notes (Max 25 characters):</label>
-        <input asp-for="Notes" maxlength="25">
+    <label asp-for="Edited">Edited:</label>
+    <select asp-for="Edited" required>
+        <option value="True">Yes</option>
+        <option value="False">No</option>
+    </select>
 
-        <button type="submit">Add Movie</button>
-    </form>
-</body>
-</html>
+    <label asp-for="LentTo">Lent To:</label>
+    <input asp-for="LentTo">
+
+    <label asp-for="Notes">Notes (Max 25 characters):</label>
+    <input asp-for="Notes" maxlength="25">
+
+    <label asp-for="CopiedToPlex">Copied To Plex?</label>
+    <select asp-for="CopiedToPlex">
+        <option value="" disabled selected>Select</option>
+        <option value="True">Yes</option>
+        <option value="False">No</option>
+    </select>
+
+    <button type="submit">Add Movie</button>
+
+    <div asp-validation-summary="All"></div>
+</form>

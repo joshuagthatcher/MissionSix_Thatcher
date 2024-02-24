@@ -1,30 +1,43 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@model Movie
+﻿@model List<MissionSixAssignment.Models.Movie>
 @{
-    ViewData["Title"] = "Movie List";   
+    ViewData["Title"] = "Movie List";
 }
-<table>
-    <thead>
-        <td>Title </td>
-        <td>Director</td>
-        <td>Release Year</td>
-        <td>Rating</td>
-        <td>Edited</td>
-        <td>Release Year</td>
-        <td>Notes</td>
 
+<div class="container mt-4">
+    <h2>Movie List</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Year</th>
+                <th>Rating</th>
+                <th>Edited</th>
+                <th>LentTo</th>
+                <th>Notes</th>
+                <th>CopiedToPlex</th>
+            </tr>
+        </thead>
         <tbody>
-            <td>@Model.Title</td>
-            <td>@Model.Director</td>
-            <td>@Model.ReleaseYear</td>
-            <td>@Model.Rating</td>
-            <td>@Model.Edited</td>
-            <td>@Model.ReleaseYear</td>
-            <td>@Model.Notes</td>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@(item.Category?.CategoryName ?? "N/A")</td>
+                    <td>@item.Title</td>
+                    <td>@item.Director</td>
+                    <td>@item.Year</td>
+                    <td>@item.Rating</td>
+                    <td>@item.Edited</td>
+                    <td>@item.LentTo</td>
+                    <td>@item.Notes</td>
+                    <td>@item.CopiedToPlex</td>
+
+                    <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@item.MovieId">Edit</a></td>
+                    <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@item.MovieId">Delete</a></td>
+                </tr>
+            }
 
         </tbody>
-
-    </thead>
-</table>
+    </table>
+</div>

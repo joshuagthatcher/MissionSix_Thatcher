@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using MissionSixAssignment.Models;
 
 namespace MissionSixAssignment.Models
 {
@@ -8,19 +10,26 @@ namespace MissionSixAssignment.Models
         [Required]
         public int MovieId { get; set; }
 
-        public string Title { get; set; }
+        [Required]
 
-        public string Director { get; set; }
+        [ForeignKey("CategoryId")]
+        public int? CategoryId { get; set; }
+        public Category? Category { get; set; }
+        public string? Title { get; set; }
+        
+        [Required]
+        [Range(1888, int.MaxValue, ErrorMessage = "The year must be greater than or equal to 1888.")]
+        public int? Year { get; set; }
+        public string? Director { get; set; }
+        public string? Rating { get; set; }
 
-        public int ReleaseYear { get; set; } 
+        [Required]
+        public bool? Edited { get; set; }= false;
+        public string? LentTo { get; set; }
+        public bool? CopiedToPlex { get; set; }
 
-        public string Rating { get; set; }
-
-        public bool Edited { get; set; }
-
-        public string LentTo { get; set; }
-
-        public string Notes { get; set; }   
+        public string? Notes { get; set; }
+   
 
 
     }
