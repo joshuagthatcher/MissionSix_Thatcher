@@ -23,7 +23,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@(item.Category?.CategoryName ?? "N/A")</td>
+                    <td>@item.Category?.CategoryName</td>
                     <td>@item.Title</td>
                     <td>@item.Director</td>
                     <td>@item.Year</td>
